@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ecd5d5;
+}
+
+.calculator {
+  width: 350px;
+  height: 570px;
+  box-shadow: 4px 4px 15px #fdf8f8;
+  border-radius: 12px;
+  background: #000000;
+  overflow: hidden;
+  padding: 10px;
+}
+
+form input {
+  width: 100%;
+  height: 150px;
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #ffffff;
+  background-color: rgb(24, 24, 24);
+  text-align: right;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  flex: auto;
+  border: 1px solid black;
+  margin: 5px 0;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  font-size: 600;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn-disabled {
+  opacity: 20%;
+  cursor: not-allowed;
+}
+.buttons {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-num {
+  background-color: #b3b2b2;
+}
+
+.btn-symbol {
+  background-color: #f59906;
+}
+
+.btn-equal {
+  background-color: #008000;
+}
+
+.btn-clear {
+  background-color: red;
+}
+
+.btn-delete {
+  background-color: rgb(58, 56, 56);
+}
+
+.footer-text {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
